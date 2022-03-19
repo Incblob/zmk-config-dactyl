@@ -73,8 +73,8 @@
             bindings = <
     &trans      &as LS(SQT) SQT &as LS(MINUS) MINUS     &as LS(SEMI) SEMI   &as LS(LBKT) LBKT  &kp RA(RBKT)                                     &kp LS(N3)      &kp GRAVE       &kp UP      &kp LS(MINUS)    &kp EQUAL     &kp LS(KP_PLUS)
     &trans      &kp LSHIFT      &kp LS(N1)              &kp RA(Q)           &kp LS(N6)         &kp LS(N5)                                       &trans          &kp LEFT        &kp DOWN    &kp RIGHT        &kp LS(RBKT)  &none
-    &trans      &kp LCTRL       &trans                  &trans              &kp LC(LS(TAB))    &kp LC(TAB)                                           &trans          &kp LS(N4)      &kp RA(E)   &kp LS(N3)       &kp trans       &kp trans
-                                &kp LC(I)               &kp LC(B)           &kp LC(LS(P))          &lt 1 SPACE         &kp trans        &trans        &mo 3        &kp RCTRL   &kp trans         &kp trans
+    &trans      &kp LCTRL       &trans                  &trans              &kp LC(LS(TAB))    &kp LC(TAB)                                      &trans          &kp LS(N4)      &kp RA(E)   &kp LS(N3)       &trans       &trans
+                                &kp LC(I)               &kp LC(B)           &kp LC(LS(P))          &lt 1 SPACE         &trans        &trans        &mo 3        &kp RCTRL   &trans         &trans
                                                                                         &none               &none                          &none        &none
             >;
         };
@@ -107,7 +107,7 @@
             bindings = <
     &kp F1      &kp F2       &kp F3    &kp F4      &kp F5     &kp F6                                               &kp F7     &kp F8   &kp F9   &kp F10    &kp F11  &kp F12
     &none       &kp N1       &kp N2    &kp N3      &kp N4     &kp N5                                               &none     &none   &none    &none    &none  &none
-    &none       &kp N6       &kp N7    &kp N8      &kp N9     &kp N0                                               &none     &none        &none    &none    &none  &none
+    &none       &kp N6       &kp N7    &kp N8      &kp N9     &kp N0                                               &none     &none        &none    &none    &none &none
                              &kp LS(LC(TAB)) &kp LC(TAB)  &none   &kp F5  &as F11 F10                      &kp LG(LS(S)) &kp LC(LS(P))     &none    &none &none
                                                     &tog 4   &as LC(LS(F5)) LS(F5)                                        &none   &to 0
             >;

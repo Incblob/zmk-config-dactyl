@@ -28,12 +28,12 @@
         };
         combo_end {
             timeout-ms = <MODTIME>;
-            key-positions = <17 18>;
+            key-positions = <20 21>;
             bindings = <&kp END>;
         };
         combo_home {
             timeout-ms = <MODTIME>;
-            key-positions = <21 22>;
+            key-positions = <19 20>;
             bindings = <&kp HOME>;
         };
     };
@@ -63,7 +63,7 @@
     &kp LSHIFT  &as LS(Q) Q     &as LS(W) W     &as LS(F) F     &as LS(P) P     &as LS(B) B                                                 &as LS(J) J         &as LS(L) L     &as LS(U) U             &as LS(Z) Z      &as LS(NON_US_HASH) NON_US_HASH    &as LC(G) LC(F)
     &kp BSPC    &as LS(A) A     &as LS(R) R     &as LS(S) S     &as LS(T) T     &as LS(G) G                                                 &as LS(M) M         &as LS(N) N     &as LS(E) E             &as LS(I) I      &as LS(O) O                       &as LC(RET) RET
     &kp LCTRL   &as LS(Y) Y     &as LS(X) X     &as LS(C) C     &as LS(D) D     &as LS(V) V                                                 &as LS(K) K         &as LS(H) H     &as LS(COMMA) COMMA     &as LS(DOT) DOT  &kp DOWN                           &kp RIGHT
-                                &kp LGUI        &kp LS(LCTRL)   &as LS(TAB) TAB &lt 1 SPACE       &kp LALT                 &kp K_UNDO        &lt 2 SPACE     &as LS(FSLH) FSLH   &kp LEFT                &kp UP
+                                &kp LGUI        &kp LS(LCTRL)   &as LS(TAB) TAB &lt 1 SPACE       &kp LALT                 &kp C_AC_UNDO        &lt 2 SPACE     &as LS(FSLH) FSLH   &kp LEFT                &kp UP
                                                                             &tog 4       &as LS(KP_PLUS) ESC                                &kp K_APP             &kp BSPC
             >;
         };

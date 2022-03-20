@@ -56,30 +56,30 @@
 
     keymap {
         compatible = "zmk,keymap";
-
+// 0
         default_layer {
 
             bindings = <
     &kp LSHIFT  &as LS(Q) Q     &as LS(W) W     &as LS(F) F     &as LS(P) P     &as LS(B) B                                                 &as LS(J) J         &as LS(L) L     &as LS(U) U             &as LS(Z) Z      &as LS(NON_US_HASH) NON_US_HASH    &as LC(G) LC(F)
     &kp BSPC    &as LS(A) A     &as LS(R) R     &as LS(S) S     &as LS(T) T     &as LS(G) G                                                 &as LS(M) M         &as LS(N) N     &as LS(E) E             &as LS(I) I      &as LS(O) O                       &as LC(RET) RET
     &kp LCTRL   &as LS(Y) Y     &as LS(X) X     &as LS(C) C     &as LS(D) D     &as LS(V) V                                                 &as LS(K) K         &as LS(H) H     &as LS(COMMA) COMMA     &as LS(DOT) DOT  &kp DOWN                           &kp RIGHT
-                                &kp LGUI        &kp LS(LCTRL)   &as LS(TAB) TAB &lt 1 SPACE       &kp LALT                 &kp C_AC_UNDO        &lt 2 SPACE     &as LS(FSLH) FSLH   &kp LEFT                &kp UP
-                                                                            &tog 4       &as LS(KP_PLUS) ESC                                &kp K_APP             &kp BSPC
+                                &kp LGUI        &kp LS(LCTRL)   &as LS(TAB) TAB &lt 1 SPACE       &kp LALT                 &kp DELETE        &lt 2 SPACE     &as LS(FSLH) FSLH   &kp LEFT                &kp UP
+                                                                            &tog 4       &as GRAVE ESC                                &kp K_APP             &kp C_AC_UNDO
             >;
         };
-
+//1
         left_layer {
 
             bindings = <
-    &trans      &as LS(SQT) SQT &as LS(MINUS) MINUS     &as LS(SEMI) SEMI   &as LS(LBKT) LBKT  &kp RA(RBKT)                                     &kp LS(N3)      &kp GRAVE       &kp UP      &kp LS(MINUS)    &kp EQUAL     &kp LS(KP_PLUS)
-    &trans      &kp LSHIFT      &kp LS(N1)              &kp RA(Q)           &kp LS(N6)         &kp LS(N5)                                       &trans          &kp LEFT        &kp DOWN    &kp RIGHT        &kp LS(RBKT)  &none
-    &trans      &kp LCTRL       &trans                  &trans              &kp LC(LS(TAB))    &kp LC(TAB)                                      &trans          &kp LS(N4)      &kp RA(E)   &kp LS(N3)       &trans       &trans
+    &kp LC(X)      &as LS(SQT) SQT &as LS(MINUS) MINUS     &as LS(SEMI) SEMI   &as LS(LBKT) LBKT  &kp RA(RBKT)                                     &kp LS(N3)      &kp GRAVE       &kp UP      &kp LS(MINUS)    &kp EQUAL     &kp LS(KP_PLUS)
+    &kp LC(C)      &kp LSHIFT      &kp LS(N1)              &kp RA(Q)           &kp LS(N6)         &kp LS(N5)                                       &trans          &kp LEFT        &kp DOWN    &kp RIGHT        &kp LS(RBKT)  &none
+    &kp LC(V)      &kp LCTRL       &trans                  &trans              &kp LC(LS(TAB))    &kp LC(TAB)                                      &trans          &kp LS(N4)      &kp RA(E)   &kp LS(N3)       &trans       &trans
                                 &kp LC(I)               &kp LC(B)           &kp LC(LS(P))          &lt 1 SPACE         &trans        &trans        &mo 3        &kp RCTRL   &trans         &trans
                                                                                         &none               &none                          &none        &none
             >;
         };
 
-
+//2
         right_layer {
 
             bindings = <
@@ -90,18 +90,18 @@
                                         &kp ESC           &kp TAB                                               &kp RET             &kp BSPC
             >;
         };
-
+//3
         both_layer {
 
             bindings = <
-    &none       &none   &none       &none               &kp C_VOL_DN      &kp C_VOL_UP                        &none           &kp LS(HOME)        &kp LC(HOME)    &kp LS(END)         &none       &none
-    &none       &none   &none       &kp K_UNDO          &kp K_REDO          &none                               &bt BT_CLR      &kp LS(LC(LEFT))    &kp LC(END)     &kp LS(LC(RIGHT))   &none       &none
-    &none       &none   &none       &kp LS(LC(TAB))     &kp LC(TAB)         &kp LC(LS(V))                       &bt BT_NXT      &none               &none           &none               &bt BT_SEL 2 &bt BT_SEL 3
-                &none   &none       &none               &mo 3            &none                               &none           &mo 3            &kp RCTRL       &bt BT_SEL 0        &bt BT_SEL 1
+    &none           &none   &none       &none               &kp C_VOL_DN      &kp C_VOL_UP                      &none           &kp LS(HOME)        &kp LC(HOME)    &kp LS(END)         &none           &none
+    &none           &none   &none       &kp K_UNDO          &kp K_REDO          &none                           &bt BT_CLR      &kp LS(LC(LEFT))    &kp LC(END)     &kp LS(LC(RIGHT))   &none           &none
+    &kp LC(LS(V))   &none   &none       &kp LS(LC(TAB))     &kp LC(TAB)         &none                           &bt BT_NXT      &bt BT_SEL 0        &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3    &bt BT_SEL 4
+                            &none   &none       &none               &mo 3            &none      &none           &mo 3            &none              &none           &none
                                                         &none      &to 5                                         &none     &none
             >;
-
         };
+//4
         func_layer {
 
             bindings = <
@@ -112,6 +112,7 @@
                                                     &tog 4   &as LC(LS(F5)) LS(F5)                                        &none   &to 0
             >;
         };
+//5
         game_layer {
 
             bindings = <

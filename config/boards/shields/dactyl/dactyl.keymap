@@ -105,7 +105,7 @@
     &kp F1      &kp F2      &kp F3    &kp F4      &kp F5     &kp F6                                               &kp F7        &kp F8  &kp F9   &kp F10  &kp F11  &kp F12
     &kp LSHIFT  &kp N1      &kp N2    &kp N3      &kp N4     &kp N5                                               &kp CAPSLOCK &none   &none    &none    &none    &kp LC(HOME)
     &kp LCTRL   &kp N6      &kp N7    &kp N8      &kp N9     &kp N0                                               &none         &none   &none    &none    &none    &kp LC(END)
-                            &none     &kp TAB     &kb LALT   &kp F5    &as F11 F10                      &kp LG(LS(S)) &kp LC(LS(P))     &kp RALT    &none       &none
+                            &none     &kp TAB     &kp LALT   &kp F5    &as F11 F10                      &kp LG(LS(S)) &kp LC(LS(P))     &kp RALT    &none       &none
                                                     &tog 4   &as LC(LS(F5)) LS(F5)                                        &none   &to 0
             >;
         };

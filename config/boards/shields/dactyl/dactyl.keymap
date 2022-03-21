@@ -46,6 +46,7 @@
                 tapping_term_ms = <160>;
                 quick_tap_ms = <0>;
                 flavor = "tap-preferred";
+                hold-trigger-key-positions = <>;    
                 bindings = <&kp>, <&kp>;
             };
     };

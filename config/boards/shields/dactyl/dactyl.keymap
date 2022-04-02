@@ -44,12 +44,12 @@
             bindings = < &kp HOME>
                 , < &kp LS(END)>
                 ;
-        );
+        )
         ZMK_MACRO(invert_vivaldi,
             wait-ms = <30>;
             tap-ms = <60>;
             bindings = <&kp LC(LS(P)) &kp I &kp N &kp V &kp E &kp DOWN &kp DOWN &kp DOWN &kp ENTER> ;
-        );
+        )
     };
 
     behaviors {

@@ -79,7 +79,7 @@
     &kp LSHIFT          &as LS(Q) Q     &as LS(W) W     &as LS(F) F     &as LS(P) P     &as LS(B) B                                                 &as LS(J) J      &as LS(L) L     &as LS(U) U             &as LS(Z) Z      &as LS(NON_US_HASH) NON_US_HASH    &as LC(G) LC(F)
     &as LS(TAB) TAB     &as LS(A) A     &as LS(R) R     &as LS(S) S     &as LS(T) T     &as LS(G) G                                                 &as LS(M) M      &as LS(N) N     &as LS(E) E             &as LS(I) I      &as LS(O) O                       &as LC(RET) RET
     &kp LCTRL           &as LS(Y) Y     &as LS(X) X     &as LS(C) C     &as LS(D) D     &as LS(V) V                                                 &as LS(K) K      &as LS(H) H     &as LS(COMMA) COMMA     &as LS(DOT) DOT  &kp DOWN                           &kp RIGHT
-                                     &kp LGUI        &kp LG(LS(S))   &kp LALT &lt 1 SPACE       &kp BSPC                           &kp DELETE        &lt 2 SPACE     &as LS(FSLH) FSLH   &kp LEFT                &kp UP
+                                     &kp LGUI        &kp LG(LS(S))   &kp LALT   &lt 1 SPACE       &kp BSPC                           &kp DELETE        &lt 2 SPACE     &as LS(FSLH) FSLH   &kp LEFT                &kp UP
                                                                             &tog 4       &mt LS(F12) F12                                   &kp K_APP             &mt LCTRL LC(Y)
         };
 // 
@@ -89,7 +89,7 @@
     &kp LC(X)               &as LS(SQT) SQT &as LS(MINUS) MINUS     &as LS(SEMI) SEMI   &as LS(LBKT) LBKT  &kp RA(RBKT)                                     &none           &none          &kp UP      &kp LS(MINUS)    &as LS(EQUAL) EQUAL     &kp LS(KP_PLUS)
     &kp LC(C)               &kp LSHIFT      &kp LS(N1)              &kp RA(Q)           &kp LS(N6)         &kp LS(N5)                                       &kp PAGE_UP     &kp LEFT        &kp DOWN    &kp RIGHT        &kp LS(RBKT)           &none
     &as LS(LC(V)) LC(V)     &kp LCTRL       &kp GRAVE               &trans              &kp LC(LS(TAB))    &kp LC(TAB)                                      &kp PAGE_DOWN   &kp LS(N4)      &kp RA(E)   &kp LS(N3)       &trans                 &none
-                                &kp LC(I)               &kp LC(B)           &kp LC(LS(P))          &lt 1 SPACE         &invert_vivaldi               &trans        &lt 3 ESC          &none    &trans         &trans 
+                                &kp LC(I)               &kp LC(B)           &kp LC(LS(P))          &lt 1 SPACE         &none               &trans        &lt 3 ESC          &none    &trans         &trans
                                                                                         &kp LG(LS(S))                &none                                       &none       &none
             >; 
         };
@@ -109,7 +109,7 @@
         both_layer {
 
             bindings = <
-    &none           &none  &none   &none  &kp C_VOL_DN  &kp C_VOL_UP                                    &none           &line_select        &kp LC(HOME)    &kp LS(END)         &none           &none
+    &none           &none  &none   &none  &kp C_VOL_DN  &kp C_VOL_UP                                    &none           &none        &kp LC(HOME)    &kp LS(END)         &none           &none
     &none           &none  &mt LC(F2) F2   &none  &none         &kp C_PLAY_PAUSE                                &bt BT_CLR      &kp LS(LC(LEFT))    &kp LC(END)     &kp LS(LC(RIGHT))   &none           &none
     &kp LC(LS(V))   &none  &none   &none  &none         &kp C_NEXT                                      &bt BT_NXT      &bt BT_SEL 0        &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3 &bt BT_SEL 4
                             &none   &none       &none               &mo 3     &none                  &none      &mo 3    &none        &none           &none

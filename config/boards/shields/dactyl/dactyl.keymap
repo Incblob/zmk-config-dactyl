@@ -38,18 +38,22 @@
     };
 
     macros {
-        ZMK_MACRO(line_select,
+        line_select: line_select {
+            compatible = "zmk,behavior-macro";
+            label = "ZM_my_macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <50>;
+            bindings = < &kp HOME &kp LS(END)>;
+        };
+            invert_vivaldi: invert_vivaldi {
+            compatible = "zmk,behavior-macro";
+            label = "ZM_my_macro";
+            #binding-cells = <0>;
             wait-ms = <30>;
             tap-ms = <40>;
-            bindings = < &kp HOME>
-                , < &kp LS(END)>
-                ;
-        ),
-        ZMK_MACRO(invert_vivaldi,
-            wait-ms = <30>;
-            tap-ms = <60>;
             bindings = <&kp LC(LS(P)) &kp I &kp N &kp V &kp E &kp DOWN &kp DOWN &kp DOWN &kp ENTER> ;
-        )
+        };
     };
 
     behaviors {

@@ -50,9 +50,34 @@
             compatible = "zmk,behavior-macro";
             label = "invert_vivaldi";
             #binding-cells = <0>;
-            wait-ms = <30>;
+            wait-ms = <80>;
             tap-ms = <40>;
-            bindings = <&kp LC(LS(P)) &kp I &kp N &kp V &kp E &kp DOWN &kp DOWN &kp DOWN &kp ENTER> ;
+            bindings = <&kp LC(LS(P))> 
+                ,<&kp I &kp N &kp V &kp E>
+                ,<&kp DOWN &kp DOWN &kp DOWN>
+                ,<&kp ENTER> ;
+        };
+        go_to_previous_def: go_to_previous_def {
+            compatible = "zmk,behavior-macro";
+            label = "go_to_previous_def";
+            #binding-cells = <0>;
+            wait-ms = <80>;
+            tap-ms = <40>;
+            bindings = <&kp ESC &kp I> 
+                ,<&kp LC(UP)>
+                ,<&kp ESC>
+                ,<&kp Y &kp T> ;
+        };
+        go_to_next_def: go_to_next_def {
+            compatible = "zmk,behavior-macro";
+            label = "go_to_next_def";
+            #binding-cells = <0>;
+            wait-ms = <80>;
+            tap-ms = <40>;
+            bindings = <&kp ESC &kp I> 
+                ,<&kp LC(DOWN)>
+                ,<&kp ESC>
+                ,<&kp Y &kp T> ;
         };
     };
 
@@ -80,7 +105,7 @@
     &as LS(TAB) TAB     &as LS(A) A     &as LS(R) R     &as LS(S) S     &as LS(T) T     &as LS(G) G                                                 &as LS(M) M      &as LS(N) N     &as LS(E) E             &as LS(I) I      &as LS(O) O                       &as LC(RET) RET
     &kp LCTRL           &as LS(Y) Y     &as LS(X) X     &as LS(C) C     &as LS(D) D     &as LS(V) V                                                 &as LS(K) K      &as LS(H) H     &as LS(COMMA) COMMA     &as LS(DOT) DOT  &kp DOWN                           &kp RIGHT
                                      &kp LGUI        &kp LG(LS(S))   &mt LALT ESC   &lt 1 SPACE       &kp BSPC                           &kp DELETE        &lt 2 SPACE     &as LS(FSLH) FSLH   &kp LEFT                &kp UP
-                                                                            &tog 4       &mt LS(F12) F12                                   &kp K_APP             &mt LCTRL LC(Y)
+                                                                            &tog 4       &mt LS(F12) F12                                   &kp K_APP             &kp LCTRL 
             >;
         };
 // 
@@ -101,8 +126,8 @@
             bindings = <
     &trans   &kp RA(NON_US_BSLH)     &as LS(N2) LS(NON_US_HASH)  &kp RA(N8)          &kp RA(N9)         &none                                                &kp KP_ASTERISK     &kp KP_N7     &kp KP_N8       &kp KP_N9      &kp KP_MINUS   &kp KP_NUMLOCK
     &trans   &kp NON_US_BSLH        &kp LS(NON_US_BSLH)         &kp LS(N8)          &kp LS(N9)         &kp LS(N0)                                           &kp KP_SLASH        &kp KP_N4     &kp KP_N5       &kp KP_N6      &kp KP_PLUS    &kp LC(RBRC)
-    &trans   &none               &none                       &as RA(N7) RA(MINUS) &as RA(N0) LS(N7)  &none                                               &kp N0              &kp KP_N1     &kp KP_N2       &kp KP_N3      &as COMMA DOT  &kp LC(FSLH)
-                                 &none                       &none                &kp LALT          &lt 3 ESC       &kp DELETE                  &none       &lt 2 SPACE        &none           &kp COMMA       &kp DOT
+    &trans   &none                  &none                       &as RA(N7) RA(MINUS) &as RA(N0) LS(N7)  &none                                               &kp N0              &kp KP_N1     &kp KP_N2       &kp KP_N3      &as COMMA DOT  &kp LC(FSLH)
+                                 &none                       &none                &kp LALT          &lt 3 ESC       &kp DELETE                  &go_to_next_def       &lt 2 SPACE        &go_to_previous_def           &kp COMMA       &kp DOT
                                                                                         &none           &none                                  &kp LC(MINUS)        &kp LC(PLUS)
             >;
         };
@@ -110,9 +135,9 @@
         both_layer {
 
             bindings = <
-    &none           &none  &none           &none  &kp C_VOL_DN  &kp C_VOL_UP                                    &none           &line_select        &kp LC(HOME)    &kp LS(END)         &none           &none
-    &none           &none  &mt LC(F2) F2   &none  &none         &kp C_PLAY_PAUSE                                &bt BT_CLR      &kp LS(LC(LEFT))    &kp LC(END)     &kp LS(LC(RIGHT))   &none           &none
-    &kp LC(LS(V))   &none  &none           &none  &none         &kp C_NEXT                                      &bt BT_NXT      &bt BT_SEL 0        &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3 &bt BT_SEL 4
+    &none           &none   &none           &none  &kp C_VOL_DN  &kp C_VOL_UP                                    &none           &line_select        &kp LC(HOME)    &kp LS(END)         &none           &none
+    &none           &kp F9  &mt LC(F2) F2   &none  &none         &kp C_PLAY_PAUSE                                &bt BT_CLR      &kp LS(LC(LEFT))    &kp LC(END)     &kp LS(LC(RIGHT))   &none           &none
+    &none           &none   &none           &none  &none         &kp C_NEXT                                      &bt BT_NXT      &bt BT_SEL 0        &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3 &bt BT_SEL 4
                             &none   &none       &none               &mo 3     &none                  &none      &mo 3    &none        &none           &none
                                                         &none      &none                                      &none     &none
             >;

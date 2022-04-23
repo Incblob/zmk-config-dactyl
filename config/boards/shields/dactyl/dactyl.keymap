@@ -34,7 +34,7 @@
             timeout-ms = <MODTIME>;
             key-positions = <19 20>;
             bindings = <&kp HOME>;
-        };
+        }; 
     };
 
     macros {
@@ -50,7 +50,7 @@
             compatible = "zmk,behavior-macro";
             label = "invert_vivaldi";
             #binding-cells = <0>;
-            wait-ms = <80>;
+            wait-ms = <100>;
             tap-ms = <40>;
             bindings = <&kp LC(LS(P))> 
                 ,<&kp I &kp N &kp V &kp E>
@@ -105,7 +105,7 @@
     &as LS(TAB) TAB     &as LS(A) A     &as LS(R) R     &as LS(S) S     &as LS(T) T     &as LS(G) G                                                 &as LS(M) M      &as LS(N) N     &as LS(E) E             &as LS(I) I      &as LS(O) O                       &as LC(RET) RET
     &kp LCTRL           &as LS(Y) Y     &as LS(X) X     &as LS(C) C     &as LS(D) D     &as LS(V) V                                                 &as LS(K) K      &as LS(H) H     &as LS(COMMA) COMMA     &as LS(DOT) DOT  &kp DOWN                           &kp RIGHT
                                      &kp LGUI        &kp LG(LS(S))   &mt LALT ESC   &lt 1 SPACE       &kp BSPC                           &kp DELETE        &lt 2 SPACE     &as LS(FSLH) FSLH   &kp LEFT                &kp UP
-                                                                            &tog 4       &mt LS(F12) F12                                   &kp K_APP             &kp LCTRL 
+                                                                            &tog 4       &mt LS(F12) F12                                   &kp K_APP             &caps_word
             >;
         };
 // 
@@ -116,8 +116,8 @@
     &kp LC(C)               &kp LSHIFT      &kp LS(N1)              &kp RA(Q)           &kp LS(N6)         &kp LS(N5)                                       &kp PAGE_UP     &kp LEFT        &kp DOWN    &kp RIGHT        &kp LS(RBKT)           &none
     &as LS(LC(V)) LC(V)     &kp LCTRL       &kp GRAVE               &trans              &kp LC(LS(TAB))    &kp LC(TAB)                                      &kp PAGE_DOWN   &kp LS(N4)      &kp RA(E)   &kp LS(N3)       &trans                 &none
                                 &kp LC(I)               &kp LC(B)           &kp LC(LS(P))          &lt 1 SPACE         &invert_vivaldi               &trans        &lt 3 ESC          &none    &trans         &trans
-                                                                                        &kp LG(LS(S))                &none                                       &none       &none
-            >; 
+                                                                                        &none                &none                                       &none       &none
+        >; 
         };
 
 //2
@@ -128,7 +128,7 @@
     &trans   &kp NON_US_BSLH        &kp LS(NON_US_BSLH)         &kp LS(N8)          &kp LS(N9)         &kp LS(N0)                                           &kp KP_SLASH        &kp KP_N4     &kp KP_N5       &kp KP_N6      &kp KP_PLUS    &kp LC(RBRC)
     &trans   &none                  &none                       &as RA(N7) RA(MINUS) &as RA(N0) LS(N7)  &none                                               &kp N0              &kp KP_N1     &kp KP_N2       &kp KP_N3      &as COMMA DOT  &kp LC(FSLH)
                                  &none                       &none                &kp LALT          &lt 3 ESC       &kp DELETE                  &go_to_next_def       &lt 2 SPACE        &go_to_previous_def           &kp COMMA       &kp DOT
-                                                                                        &none           &none                                  &kp LC(MINUS)        &kp LC(PLUS)
+                                                                                        &none           &none                                  &kp LC(FSLH)        &kp LC(KP_PLUS)
             >;
         };
 //3
@@ -149,8 +149,8 @@
     &kp F1      &kp F2      &kp F3    &kp F4      &kp F5     &kp F6                                               &kp F7        &kp F8  &kp F9   &kp F10  &kp F11  &kp F12
     &kp LSHIFT  &kp N1      &kp N2    &kp N3      &kp N4     &kp N5                                               &kp CAPSLOCK &none   &none    &none    &none    &kp LC(HOME)
     &kp LCTRL   &kp N6      &kp N7    &kp N8      &kp N9     &kp N0                                               &none         &none   &none    &none    &none    &kp LC(END)
-                            &none     &kp TAB     &kp LALT   &kp F5    &as F10 F11                      &none  &none     &kp RALT    &none       &none
-                                                    &tog 4   &as LC(LS(F5)) LS(F5)                                        &none   &to 0
+                            &none     &kp TAB     &kp LALT   &kp F5    &as F11 F10                      &none  &none     &kp RALT    &none       &none
+                                                    &tog 4   &as LC(LS(F5)) LS(F5)                                        &none   &none
             >;
         };
     };

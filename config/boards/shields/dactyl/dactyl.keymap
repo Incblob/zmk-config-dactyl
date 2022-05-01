@@ -43,15 +43,15 @@
             label = "line_select";
             #binding-cells = <0>;
             wait-ms = <30>;
-            tap-ms = <50>;
+            tap-ms = <60>;
             bindings = < &kp HOME &kp LS(END)>;
         };
         invert_vivaldi: invert_vivaldi {
             compatible = "zmk,behavior-macro";
             label = "invert_vivaldi";
             #binding-cells = <0>;
-            wait-ms = <100>;
-            tap-ms = <40>;
+            wait-ms = <150>;
+            tap-ms = <50>;
             bindings = <&kp LC(LS(P))> 
                 ,<&kp I &kp N &kp V &kp E>
                 ,<&kp DOWN &kp DOWN &kp DOWN>
@@ -61,7 +61,7 @@
             compatible = "zmk,behavior-macro";
             label = "go_to_previous_def";
             #binding-cells = <0>;
-            wait-ms = <80>;
+            wait-ms = <120>;
             tap-ms = <40>;
             bindings = <&kp ESC &kp I> 
                 ,<&kp LC(UP)>
@@ -72,7 +72,7 @@
             compatible = "zmk,behavior-macro";
             label = "go_to_next_def";
             #binding-cells = <0>;
-            wait-ms = <80>;
+            wait-ms = <120>;
             tap-ms = <40>;
             bindings = <&kp ESC &kp I> 
                 ,<&kp LC(DOWN)>
@@ -147,8 +147,8 @@
 
             bindings = <
     &kp F1      &kp F2      &kp F3    &kp F4      &kp F5     &kp F6                                               &kp F7        &kp F8  &kp F9   &kp F10  &kp F11  &kp F12
-    &kp LSHIFT  &kp N1      &kp N2    &kp N3      &kp N4     &kp N5                                               &kp CAPSLOCK &none   &none    &none    &none    &kp LC(HOME)
-    &kp LCTRL   &kp N6      &kp N7    &kp N8      &kp N9     &kp N0                                               &none         &none   &none    &none    &none    &kp LC(END)
+    &kp LSHIFT  &kp N1      &kp N2    &kp N3      &kp N4     &kp N5                                               &kp CAPSLOCK &none   &none    &none    &none    &none
+    &kp LCTRL   &kp N6      &kp N7    &kp N8      &kp N9     &kp N0                                               &none         &none   &none    &none    &none    &none
                             &none     &kp TAB     &kp LALT   &kp F5    &as F11 F10                      &none  &none     &kp RALT    &none       &none
                                                     &tog 4   &as LC(LS(F5)) LS(F5)                                        &none   &none
             >;

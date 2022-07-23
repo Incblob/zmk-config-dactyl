@@ -107,7 +107,7 @@
                 compatible = "zmk,behavior-hold-tap";
                 label = "AUTO_SHIFT";
                 #binding-cells = <2>;
-                tapping_term_ms = <185>;
+                tapping_term_ms = <170>;
                 quick_tap_ms = <0>;
                 flavor = "tap-preferred";
                 //hold-trigger-key-positions = <0>;    

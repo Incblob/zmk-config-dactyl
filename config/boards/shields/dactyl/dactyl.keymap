@@ -158,7 +158,7 @@
             bindings = <
     &none           &none   &none           &none  &kp C_VOL_DN  &none                                &none           &line_select        &kp LC(HOME)    &kp LS(END)         &none           &none
     &none           &kp F9  &mt LC(F2) F2   &none  &none         &none                                &bt BT_CLR      &kp LS(LC(LEFT))    &kp LC(END)     &kp LS(LC(RIGHT))   &none           &none
-    &none           &none   &none           &none  &kp LALT(LEFT)    &kp LALT(RIGHT)                      &none      &bt BT_SEL 0        &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3 &bt BT_SEL 4
+    &none           &none   &none           &none  &kp LA(LEFT)    &kp LA(RIGHT)                      &none      &bt BT_SEL 0        &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3 &bt BT_SEL 4
                             &none   &none                      &none          &trans     &none        &none      &trans    &none        &none           &none
                                                         &none      &none                                      &none     &none
             >;
@@ -175,16 +175,5 @@
             >;
         };
 
-        steno_layer {
-
-            bindings = <
-    &kp ESC     &kp N1   &kp N2   &kp N3   &kp N4   &kp N5                   &kp N6   &kp N7     &kp N8 &kp N9   &kp N0  &none
-    &kp TAB     &kp Q   &kp W   &kp E   &kp R    &kp T                      &kp Y &kp U   &kp I     &kp O &kp P   &kp RA(NON_US_BSLH) 
-    &kp LCTRL   &kp A   &kp S   &kp D   &kp F   &kp G                       &kp H &kp J   &kp K     &kp L &kp LS(COMMA)   &kp DOT   
-                    &none   &none   &kp C   &kp V   &kp SPACE       &kp SPACE  &kp N   &kp M     &none &none
-                                        &to 0      &mo 1                &mo 2            &none
-            >; 
-        };
-// 
     };
 };

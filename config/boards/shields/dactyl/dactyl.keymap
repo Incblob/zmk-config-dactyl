@@ -49,7 +49,8 @@
             layers = <0>;
         }; 
     };
-
+};
+/ {
     macros {
         line_select: line_select {
             compatible = "zmk,behavior-macro";
@@ -73,7 +74,7 @@
                 bindings = <&kp>, <&kp>; 
             };
     };
-
+};
     &caps_word {
         continue-list = <UNDERSCORE MINUS BACKSPACE DELETE LEFT RIGHT LS(FSLH) FSLH>;
     };

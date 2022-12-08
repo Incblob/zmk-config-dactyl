@@ -59,47 +59,6 @@
             tap-ms = <60>;
             bindings = < &kp HOME &kp LS(END)>;
         };
-        space_out: space_out{
-            compatible = "zmk,behavior-macro";
-            label = "space_out";
-            #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <60>;
-            bindings = < &kp LEFT &kp SPACE &kp RIGHT &kp SPACE>;
-        };
-        invert_vivaldi: invert_vivaldi {
-            compatible = "zmk,behavior-macro";
-            label = "invert_vivaldi";
-            #binding-cells = <0>;
-            wait-ms = <180>;
-            tap-ms = <40>;
-            bindings = <&kp LC(LS(P))> 
-                ,<&kp I &kp N &kp V &kp E>
-                ,<&kp DOWN &kp DOWN &kp DOWN>
-                ,<&kp ENTER> ;
-        };
-        go_to_previous_def: go_to_previous_def {
-            compatible = "zmk,behavior-macro";
-            label = "go_to_previous_def";
-            #binding-cells = <0>;
-            wait-ms = <120>;
-            tap-ms = <40>;
-            bindings = <&kp ESC &kp I> 
-                ,<&kp LC(UP)>
-                ,<&kp ESC>
-                ,<&kp Y &kp T> ;
-        };
-        go_to_next_def: go_to_next_def {
-            compatible = "zmk,behavior-macro";
-            label = "go_to_next_def";
-            #binding-cells = <0>;
-            wait-ms = <120>;
-            tap-ms = <40>;
-            bindings = <&kp ESC &kp I> 
-                ,<&kp LC(DOWN)>
-                ,<&kp ESC>
-                ,<&kp Y &kp T> ;
-        };
     };
 
     behaviors {
@@ -107,7 +66,7 @@
                 compatible = "zmk,behavior-hold-tap";
                 label = "AUTO_SHIFT";
                 #binding-cells = <2>;
-                tapping_term_ms = <170>;
+                tapping_term_ms = <180>;
                 quick_tap_ms = <0>;
                 flavor = "tap-preferred";
                 //hold-trigger-key-positions = <0>;    
@@ -115,6 +74,9 @@
             };
     };
 
+    &caps_word {
+        continue-list = <UNDERSCORE MINUS BACKSPACE DELETE LEFT RIGHT LS(FSLH) FSLH>;
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -136,7 +98,7 @@
     &kp LC(X)               &as LS(SQT) SQT &as LS(MINUS) MINUS     &as LS(SEMI) SEMI   &as LS(LBKT) LBKT  &kp RA(RBKT)                                     &none           &none          &kp UP      &kp LS(MINUS)    &as EQUAL LS(EQUAL)      &kp LS(KP_PLUS)
     &kp LC(C)               &kp LSHIFT      &kp LS(N1)              &kp RA(Q)           &kp LS(N6)         &kp LS(N5)                                       &kp PAGE_UP     &kp LEFT        &kp DOWN    &kp RIGHT        &kp LS(RBKT)           &none
     &as LS(LC(V)) LC(V)     &kp LCTRL       &kp GRAVE               &trans              &kp LC(LS(TAB))    &kp LC(TAB)                                      &kp PAGE_DOWN   &kp LS(N4)      &kp RA(E)   &kp LS(N3)       &trans                 &none
-                                &kp LC(I)               &kp LC(B)           &kp LC(LS(P))          &trans         &invert_vivaldi               &trans        &mo 2          &kp LALT    &trans         &trans
+                                &kp LC(I)               &kp LC(B)           &kp LC(LS(P))          &trans         &none               &trans        &mo 2          &kp LALT    &trans         &trans
                                                                                         &kp K_BACK                &kp K_FORWARD                                       &none       &none
         >; 
         };
@@ -146,9 +108,9 @@
 
             bindings = <
     &trans   &kp RA(NON_US_BSLH)     &as LS(N2) LS(NON_US_HASH)  &kp RA(N8)          &kp RA(N9)         &none                                                &kp KP_ASTERISK     &kp N7     &kp N8       &kp N9      &kp KP_MINUS   &kp KP_NUMLOCK
-    &trans   &kp NON_US_BSLH        &kp LS(NON_US_BSLH)         &kp LS(N8)          &kp LS(N9)         &kp LS(N0)                                           &kp KP_SLASH        &kp N4     &kp N5       &kp N6      &kp KP_PLUS    &kp LC(RBRC)
+    &trans   &kp NON_US_BSLH        &kp LS(NON_US_BSLH)         &kp LS(N8)          &kp LS(N9)         &kp LS(N0)                                           &kp KP_SLASH        &kp N4     &kp N5       &kp N6      &kp KP_PLUS    &kp LC(KP_PLUS)
     &trans   &none                  &none                       &as RA(N7) RA(MINUS) &as RA(N0) LS(N7)  &none                                               &kp N0              &kp N1     &kp N2       &kp N3      &as COMMA DOT  &kp LC(FSLH)
-                                 &none                       &none                &kp LALT          &mo 1       &none                   &go_to_next_def       &lt 2 SPACE        &go_to_previous_def           &kp COMMA       &kp DOT
+                                 &none                       &none                &kp LALT          &mo 1       &none                   &none       &lt 2 SPACE        &none           &kp COMMA       &kp DOT
                                                                                         &none           &none                                  &kp LC(FSLH)        &kp LC(KP_PLUS)
             >;
         };
@@ -156,10 +118,10 @@
         both_layer {
 
             bindings = <
-    &none           &none   &none           &none  &kp C_VOL_DN  &none                                &none           &line_select        &kp LC(HOME)    &kp LS(END)         &none           &none
-    &none           &kp F9  &mt LC(F2) F2   &none  &none         &none                                &bt BT_CLR      &kp LS(LC(LEFT))    &kp LC(END)     &kp LS(LC(RIGHT))   &none           &none
+    &none           &none   &none           &none  &kp C_VOL_DN  &none                                &bt BT_CLR &line_select        &kp LC(HOME)    &kp LS(END)         &none           &none
+    &none           &none   &mt LC(F2) F2   &none  &none         &none                                &none      &kp LS(LC(LEFT))    &kp LC(END)     &kp LS(LC(RIGHT))   &none           &none
     &none           &none   &none           &none  &kp LA(LEFT)    &kp LA(RIGHT)                      &none      &bt BT_SEL 0        &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3 &bt BT_SEL 4
-                            &none   &none                      &none          &trans     &none        &none      &trans    &none        &none           &none
+                            &none   &none                &none          &trans     &none        &none      &trans     &none    &none           &none
                                                         &to 4      &none                                      &none     &none
             >;
         };

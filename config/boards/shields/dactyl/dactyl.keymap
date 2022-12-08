@@ -78,9 +78,10 @@
     &caps_word {
         continue-list = <UNDERSCORE MINUS BACKSPACE DELETE LEFT RIGHT LS(FSLH) FSLH>;
     };
-
+/{
     keymap {
         compatible = "zmk,keymap";
+    
 // 0
         default_layer {
 

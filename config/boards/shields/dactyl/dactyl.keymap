@@ -128,14 +128,14 @@
         both_layer {
 
             bindings = <
-    &none           &none   &quote_word     &none  &kp C_VOL_DN  &none                               &bt BT_CLR &line_select        &kp LC(HOME)    &kp LS(END)         &none           &none
+    &none           &none   &quote_word     &none  &kp C_VOL_DN  &none                               &bt BT_CLR &line_select        &kp LC(HOME)    &kp LS(END)         &none           &sl 4
     &none           &none   &mt LC(F2) F2   &none  &none         &none                                &none      &kp LS(LC(LEFT))    &kp LC(END)     &kp LS(LC(RIGHT))   &none           &none
     &none           &none   &none           &none  &kp LA(LEFT)    &kp LA(RIGHT)                      &none      &bt BT_SEL 0        &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3 &bt BT_SEL 4
-                            &none   &none                &none          &trans     &none        &none      &trans     &none    &none           &none
+                            &none   &none                &none          &trans     &to 5        &none      &trans     &none    &none           &none
                                                         &to 4      &none                                      &none     &none
             >;
         };
-//
+//4
         func_layer {
 
             bindings = <
@@ -144,6 +144,28 @@
     &kp LCTRL   &kp N6      &kp N7    &kp N8      &kp N9     &kp N0                                               &none         &none   &none    &none    &none    &none
                             &none     &kp TAB     &kp LALT   &kp F5    &as F11 F10                      &none  &none     &kp RALT    &none       &none
                                                     &to 0   &as LC(LS(F5)) LS(F5)                                        &none   &to 5
+            >;
+        };
+//5
+        gaming_layer {
+
+            bindings = <
+    &kp ESC &kp TAB   &kp Q   &kp T    &kp E      &kp R                                                      &kp F7        &kp F8  &kp F9   &kp F10  &kp F11  &to 0
+    &kp TAB &kp LSHFT &kp A   &kp W    &kp D      &kp F                                                      &kp CAPSLOCK &none   &none    &none    &none    &none
+    &kp V   &kp LCTRL &kp Z   &kp S    &kp C      &kp D                                                     &none         &none   &none    &none    &none    &none
+                        &kp M   &kp X       &kp LALT    &kp SPACE    &mo 6                      &none  &none     &none    &none       &none
+                                                    &kp G   &as                                         &none   &none
+            >;
+        };
+//6 
+    gaming_layer2 {
+
+            bindings = <
+    &kp F5 &trans &kp N7   &kp N8    &kp N9      &kp R                                                      &kp F7        &kp F8  &kp F9   &kp F10  &kp F11  &to 0
+    &kp F6 &trans &kp N4   &kp N5    &kp N6      &kp F                                                      &kp CAPSLOCK &none   &none    &none    &none    &none
+    &trans &trans &kp N1   &kp N2    &kp N3      &kp D                                                     &none         &none   &none    &none    &none    &none
+                        &kp M   &kp X       &trans    &kp LALT    &trans                      &none  &none     &kp RALT    &none       &none
+                                                    &trans   &trans                                         &none   &to 5
             >;
         };
 

@@ -129,7 +129,7 @@
 
             bindings = <
     &none           &none   &quote_word     &none  &kp C_VOL_DN  &none                               &bt BT_CLR &line_select        &kp LC(HOME)    &kp LS(END)         &none           &sl 4
-    &none           &none   &mt LC(F2) F2   &none  &none         &none                                &none      &kp LS(LC(LEFT))    &kp LC(END)     &kp LS(LC(RIGHT))   &none           &none
+    &none           &none   &mt LC(F2) F2   &none  &none         &none                                &none      &kp LS(LC(LEFT))    &kp LC(END)     &kp LS(LC(RIGHT))   &none           &bt BT_SEL 5
     &none           &none   &none           &none  &kp LA(LEFT)    &kp LA(RIGHT)                      &none      &bt BT_SEL 0        &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3 &bt BT_SEL 4
                             &none   &none                &none          &trans     &to 5        &none      &trans     &none    &none           &none
                                                         &to 4      &none                                      &none     &none
